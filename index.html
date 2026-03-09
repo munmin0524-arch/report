@@ -474,11 +474,12 @@ html, body {
       <div class="up" style="font-size:14px;color:var(--text3);font-weight:300;letter-spacing:.8px;margin-bottom:40px;">
         AIDT Super Platform · Game Service Planning
       </div>
-      <div class="up" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;">
+      <div class="up" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px;">
         <span class="pill" style="background:#FFF0EB;color:var(--orange);font-weight:800;">Quiz Party</span>
         <span class="pill" style="background:#FFF8F0;color:#C88A00;font-weight:800;">Solo Party</span>
         <span class="pill" style="background:#EDF7F3;color:var(--green);font-weight:800;">Home Party</span>
       </div>
+      <div class="up" style="font-size:18px;font-weight:700;color:var(--navy);margin-bottom:32px;letter-spacing:.3px;">수업 · 복습 · 커뮤니티를 게임으로 연결하는 학습 서비스</div>
       <div class="up" style="font-size:14px;color:var(--text3);line-height:1.8;">
         에듀테크 플랫폼 기획 Core<br>
         2026. 03
@@ -568,13 +569,17 @@ html, body {
           </div>
         </div>
       </div>
-      <!-- RIGHT: images stacked -->
-      <div style="display:flex;flex-direction:column;gap:8px;min-height:0;">
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;">
-          <img src="3_1.gif" alt="AIDT 현황 1" style="width:100%;height:100%;object-fit:cover;">
+      <!-- RIGHT: images overlapping -->
+      <div style="position:relative;min-height:0;">
+        <!-- 3_1: 뒤에 (좌상단) -->
+        <div class="img-block up" style="position:absolute;top:0;left:0;width:75%;height:70%;border-radius:12px;overflow:visible;z-index:1;">
+          <img src="3_1.png" alt="AIDT 현황 1" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+          <!-- 빨간 버튼 영역: 우상단 "교재 게임" 버튼 -->
+          <div id="redBox" style="position:absolute;top:1%;right:3%;width:75px;height:30px;border:3px solid #E8500A;border-radius:5px;z-index:5;"></div>
         </div>
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;">
-          <img src="3_2.gif" alt="AIDT 현황 2" style="width:100%;height:100%;object-fit:cover;">
+        <!-- 3_2: 앞에 (우하단) -->
+        <div class="img-block up" style="position:absolute;bottom:0;right:0;width:75%;height:70%;border-radius:12px;overflow:hidden;z-index:2;border:2px solid #B0BEC5;box-shadow:0 8px 30px rgba(15,37,68,.15);">
+          <img src="3_2.png" alt="AIDT 현황 2" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
         </div>
       </div>
     </div>
@@ -622,13 +627,15 @@ html, body {
           <span style="color:var(--orange);">학습 데이터가 연결되는 의미 있는 게임</span>과<br>교사가 신뢰할 수 있는 <span style="color:var(--orange);">교육과정 기반 콘텐츠</span>가 필요하다
         </div>
       </div>
-      <!-- RIGHT: images stacked -->
-      <div style="display:flex;flex-direction:column;gap:8px;min-height:0;">
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-          <img src="4_1.gif" alt="Kahoot 벤치마킹 1" style="max-width:100%;max-height:100%;object-fit:contain;">
+      <!-- RIGHT: images overlapping -->
+      <div style="position:relative;min-height:0;">
+        <!-- 4_1: 뒤 (좌상단) -->
+        <div class="img-block up" style="position:absolute;top:0;left:0;width:75%;height:70%;border-radius:12px;overflow:hidden;z-index:1;">
+          <img src="4_1.png" alt="Kahoot 벤치마킹 1" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="openLightbox(this.src)">
         </div>
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-          <img src="4_2.gif" alt="Kahoot 벤치마킹 2" style="max-width:100%;max-height:100%;object-fit:contain;">
+        <!-- 4_2: 앞 (우하단) -->
+        <div class="img-block up" style="position:absolute;bottom:0;right:0;width:75%;height:70%;border-radius:12px;overflow:hidden;z-index:2;border:2px solid #B0BEC5;box-shadow:0 8px 30px rgba(15,37,68,.15);">
+          <img src="4_2.png" alt="Kahoot 벤치마킹 2" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="openLightbox(this.src)">
         </div>
       </div>
     </div>
@@ -705,8 +712,8 @@ html, body {
         <div class="body" style="font-size:14.5px;">
           교사·학생 여러 명이 <strong>동시 참여</strong>하는 실시간 퀴즈 게임
         </div>
-        <div style="margin-top:auto;padding-top:10px;">
-          <div style="width:100%;height:100px;border-radius:8px;border:2px dashed #FCCAB8;background:#FFF8F5;display:flex;align-items:center;justify-content:center;">
+        <div style="flex:1;margin-top:10px;min-height:0;">
+          <div style="width:100%;height:100%;border-radius:8px;border:2px dashed #FCCAB8;background:#FFF8F5;display:flex;align-items:center;justify-content:center;">
             <span style="font-size:13px;color:var(--text3);font-weight:600;">화면 이미지 추가 예정</span>
           </div>
         </div>
@@ -718,8 +725,8 @@ html, body {
         <div class="body" style="font-size:14.5px;">
           학생이 <strong>혼자 NPC와</strong> 참여하는 자기주도 학습 게임
         </div>
-        <div style="margin-top:auto;padding-top:10px;">
-          <div style="width:100%;height:100px;border-radius:8px;border:2px dashed #C5D8F5;background:#F5F8FF;display:flex;align-items:center;justify-content:center;">
+        <div style="flex:1;margin-top:10px;min-height:0;">
+          <div style="width:100%;height:100%;border-radius:8px;border:2px dashed #C5D8F5;background:#F5F8FF;display:flex;align-items:center;justify-content:center;">
             <span style="font-size:13px;color:var(--text3);font-weight:600;">화면 이미지 추가 예정</span>
           </div>
         </div>
@@ -731,8 +738,8 @@ html, body {
         <div class="body" style="font-size:14.5px;">
           교사·학생 라포 형성을 위한<br>"나의 방" 메타버스 세계관
         </div>
-        <div style="margin-top:auto;padding-top:10px;">
-          <div style="width:100%;height:100px;border-radius:8px;border:2px dashed #B3DECE;background:#F4FBF8;display:flex;align-items:center;justify-content:center;">
+        <div style="flex:1;margin-top:10px;min-height:0;">
+          <div style="width:100%;height:100%;border-radius:8px;border:2px dashed #B3DECE;background:#F4FBF8;display:flex;align-items:center;justify-content:center;">
             <span style="font-size:13px;color:var(--text3);font-weight:600;">화면 이미지 추가 예정</span>
           </div>
         </div>
@@ -771,13 +778,14 @@ html, body {
           <div style="font-size:14px;font-weight:800;color:var(--orange);margin-top:3px;">수업 준비 시간 최소화 — 교사 부담을 줄이고 수업 집중도 향상</div>
         </div>
       </div>
-      <!-- RIGHT: images stacked, fill space -->
-      <div style="display:flex;flex-direction:column;gap:8px;min-height:0;">
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;">
-          <img src="7_1.gif" alt="편리한 서비스 1" style="width:100%;height:100%;object-fit:cover;">
+      <!-- RIGHT: images overlapping, click to swap -->
+      <div class="img-swap" style="position:relative;min-height:0;cursor:pointer;" onclick="swapImgs(this)">
+        <div style="position:absolute;top:-2px;right:0;z-index:10;color:var(--text3);font-size:9px;font-weight:600;pointer-events:none;">click to swap</div>
+        <div class="img-block up img-front" style="position:absolute;top:0;left:0;width:92%;height:88%;border-radius:12px;overflow:hidden;z-index:2;border:2px solid #B0BEC5;box-shadow:0 8px 30px rgba(15,37,68,.2);transition:all .3s;">
+          <img src="7_1.png" alt="편리한 서비스 1" style="width:100%;height:100%;object-fit:cover;">
         </div>
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;">
-          <img src="7_2.gif" alt="편리한 서비스 2" style="width:100%;height:100%;object-fit:cover;">
+        <div class="img-block up img-back" style="position:absolute;bottom:0;right:0;width:65%;height:60%;border-radius:12px;overflow:hidden;z-index:1;transition:all .3s;">
+          <img src="7_2.png" alt="편리한 서비스 2" style="width:100%;height:100%;object-fit:cover;">
         </div>
       </div>
     </div>
@@ -809,13 +817,14 @@ html, body {
           <div style="font-size:15px;font-weight:800;color:var(--green);margin:3px 0;">오답 복습 → 처방 게임 → 학습 습관 형성</div>
         </div>
       </div>
-      <!-- RIGHT: images stacked -->
-      <div style="display:flex;flex-direction:column;gap:8px;min-height:0;">
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-          <img src="8_1.gif" alt="데이터 기반 코칭 1" style="max-width:100%;max-height:100%;object-fit:contain;">
+      <!-- RIGHT: images overlapping, click to swap -->
+      <div class="img-swap" style="position:relative;min-height:0;cursor:pointer;" onclick="swapImgs(this)">
+        <div style="position:absolute;top:-2px;right:0;z-index:10;color:var(--text3);font-size:9px;font-weight:600;pointer-events:none;">click to swap</div>
+        <div class="img-block up img-front" style="position:absolute;top:0;left:0;width:92%;height:88%;border-radius:12px;overflow:hidden;z-index:2;border:2px solid #B0BEC5;box-shadow:0 8px 30px rgba(15,37,68,.2);transition:all .3s;">
+          <img src="8_1.png" alt="데이터 기반 코칭 1" style="width:100%;height:100%;object-fit:cover;">
         </div>
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-          <img src="8_2.gif" alt="데이터 기반 코칭 2" style="max-width:100%;max-height:100%;object-fit:contain;">
+        <div class="img-block up img-back" style="position:absolute;bottom:0;right:0;width:65%;height:60%;border-radius:12px;overflow:hidden;z-index:1;transition:all .3s;">
+          <img src="8_2.png" alt="데이터 기반 코칭 2" style="width:100%;height:100%;object-fit:cover;">
         </div>
       </div>
     </div>
@@ -853,12 +862,13 @@ html, body {
           <span style="color:var(--orange);">비상교육 공신력 있는 문항</span>으로<br>교사는 신뢰, 학생은 맞춤 처방
         </div>
       </div>
-      <!-- RIGHT: images stacked, fill space -->
-      <div style="display:flex;flex-direction:column;gap:8px;min-height:0;">
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;">
+      <!-- RIGHT: images overlapping, click to swap -->
+      <div class="img-swap" style="position:relative;min-height:0;cursor:pointer;" onclick="swapImgs(this)">
+        <div style="position:absolute;top:-2px;right:0;z-index:10;color:var(--text3);font-size:9px;font-weight:600;pointer-events:none;">click to swap</div>
+        <div class="img-block up img-front" style="position:absolute;top:0;left:0;width:92%;height:88%;border-radius:12px;overflow:hidden;z-index:2;border:2px solid #B0BEC5;box-shadow:0 8px 30px rgba(15,37,68,.2);transition:all .3s;">
           <img src="9_1.png" alt="정교한 문항 1" style="width:100%;height:100%;object-fit:cover;">
         </div>
-        <div class="img-block up" style="flex:1;min-height:0;border-radius:12px;overflow:hidden;">
+        <div class="img-block up img-back" style="position:absolute;bottom:0;right:0;width:65%;height:60%;border-radius:12px;overflow:hidden;z-index:1;transition:all .3s;">
           <img src="9_2.png" alt="정교한 문항 2" style="width:100%;height:100%;object-fit:cover;">
         </div>
       </div>
@@ -1030,12 +1040,12 @@ html, body {
 </div><!-- /stageWrap -->
 
 <!-- BOTTOM BAR -->
-<div id="bottombar">
+<div id="bottombar" style="justify-content:center;position:relative;">
   <button class="btn-nav" id="prevBtn" onclick="nav(-1)" disabled>◀</button>
   <div class="slide-dots" id="dotsRow"></div>
   <button class="btn-nav" id="nextBtn" onclick="nav(1)">▶</button>
   <span id="pageNum" style="font-size:14px;font-weight:700;color:var(--text2);margin-left:8px;white-space:nowrap;">1 / 12</span>
-  <div class="hint">← → 방향키 이동 &nbsp;|&nbsp; 상단 섹션 클릭으로 바로 이동</div>
+  <div class="hint" style="position:absolute;right:28px;">← → 방향키 이동 &nbsp;|&nbsp; 상단 섹션 클릭으로 바로 이동</div>
 </div>
 
 <script>
@@ -1048,7 +1058,7 @@ const dr = document.getElementById('dotsRow');
 for(let i=0;i<TOTAL;i++){
   const d=document.createElement('div');
   d.className='sdot'+(i===0?' on':'');
-  d.onclick=()=>goTo(i);
+  // dot click disabled
   dr.appendChild(d);
 }
 
@@ -1106,12 +1116,42 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft'||e.key==='ArrowUp') nav(-1);
 });
 
-document.getElementById('stage').addEventListener('click',e=>{
-  if(e.target.closest('button,.toc-item,.game-c')) return;
-  nav(1);
-});
+// stage click disabled
 
 updateUI();
+
+// Swap overlapping images
+function swapImgs(container){
+  const front=container.querySelector('.img-front');
+  const back=container.querySelector('.img-back');
+  // Swap classes
+  front.classList.remove('img-front');
+  front.classList.add('img-back');
+  back.classList.remove('img-back');
+  back.classList.add('img-front');
+  // Swap styles
+  front.style.cssText='position:absolute;bottom:0;right:0;width:65%;height:60%;border-radius:12px;overflow:hidden;z-index:1;transition:all .3s;';
+  back.style.cssText='position:absolute;top:0;left:0;width:92%;height:88%;border-radius:12px;overflow:hidden;z-index:2;border:2px solid #B0BEC5;box-shadow:0 8px 30px rgba(15,37,68,.2);transition:all .3s;';
+}
+
+// Lightbox
+function openLightbox(src){
+  const lb=document.getElementById('lightbox');
+  document.getElementById('lbImg').src=src;
+  lb.style.display='flex';
+  requestAnimationFrame(()=>lb.style.opacity='1');
+}
+function closeLightbox(){
+  const lb=document.getElementById('lightbox');
+  lb.style.opacity='0';
+  setTimeout(()=>lb.style.display='none',200);
+}
 </script>
+
+<!-- Lightbox overlay -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none;opacity:0;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.75);align-items:center;justify-content:center;cursor:pointer;transition:opacity .2s;">
+  <img id="lbImg" src="" style="max-width:90vw;max-height:90vh;object-fit:contain;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);">
+</div>
+
 </body>
 </html>
