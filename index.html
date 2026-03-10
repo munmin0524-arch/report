@@ -693,7 +693,7 @@ html, body {
         <div class="body" style="font-size:16px;line-height:1.8;">
           • 수업 중 <strong>학생 진행 상황</strong>이 교사 화면에 자동 표시<br>
           • 수업 후 <strong>게임 결과가 자동 정리</strong><br>
-          • 틀린 문항 <strong>자동 추천</strong> → 학생이 알아서 복습까지 연결
+          • <strong>오답노트 · 맞춤 처방</strong> 제공 → 학생 자기주도 복습 유도
         </div>
       </div>
       <div class="card up" style="display:flex;flex-direction:column;gap:6px;padding:12px 24px;">
@@ -846,8 +846,8 @@ html, body {
           <div style="font-size:14px;font-weight:400;color:var(--navy);margin:3px 0;">게임 결과가 <strong>문항별·학생별</strong>로 자동 정리</div>
         </div>
         <div class="card-green up" style="padding:14px 16px;margin-bottom:14px;">
-          <div class="lbl" style="color:var(--green);font-size:18px;">복습용 — 학생이 알아서 하는 오답 복습</div>
-          <div style="font-size:14px;font-weight:400;color:var(--navy);margin:3px 0;">틀린 문항 <strong>자동 추천</strong> → 게임으로 다시 풀기</div>
+          <div class="lbl" style="color:var(--green);font-size:18px;">복습용 — 오답노트로 자기주도 학습</div>
+          <div style="font-size:14px;font-weight:400;color:var(--navy);margin:3px 0;"><strong>오답노트 · 맞춤 처방</strong> → 스스로 복습하는 습관</div>
         </div>
         <div style="text-align:center;color:var(--text3);font-size:14px;margin-bottom:6px;">▼</div>
         <div class="hl-bar up" style="padding:14px 18px;">
@@ -962,51 +962,54 @@ html, body {
       <!-- RIGHT: 결합된 시너지 -->
       <div style="display:flex;flex-direction:column;gap:10px;min-height:0;background:#FFFAF7;border-radius:16px;padding:20px;border:1px solid #FFE8E0;">
         <div class="up" style="font-size:20px;font-weight:900;color:var(--orange);letter-spacing:.5px;">결합된 시너지</div>
-        <!-- 순환 다이어그램 with image placeholders -->
+        <!-- 순환 다이어그램 -->
         <div class="up" style="flex:1;position:relative;min-height:0;">
-          <!-- 상단 중앙: Quiz Party -->
+          <!-- 상단 중앙: Quiz Party (STEP 1) -->
           <div style="position:absolute;top:4px;left:50%;transform:translateX(-50%);z-index:2;width:180px;display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="font-size:12px;font-weight:900;color:var(--orange);letter-spacing:1px;">STEP 1</div>
             <div style="width:100%;height:auto;border-radius:12px;background:var(--orange);color:#fff;padding:10px 14px;text-align:center;box-shadow:0 4px 16px rgba(232,80,10,.2);">
-              <div style="font-size:11px;font-weight:800;letter-spacing:1px;opacity:.7;">STEP 1 · QUIZ PARTY</div>
+              <div style="font-size:11px;font-weight:800;letter-spacing:1px;opacity:.7;">QUIZ PARTY</div>
               <div style="font-size:14px;font-weight:900;">수업용 퀴즈</div>
             </div>
             <div style="width:100%;height:60px;border-radius:8px;overflow:hidden;">
               <img src="6_1.png" alt="Quiz Party" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
             </div>
           </div>
-          <!-- 좌측 하단: Home Party (STEP 3) -->
-          <div style="position:absolute;left:10%;bottom:4px;z-index:2;width:160px;display:flex;flex-direction:column;align-items:center;gap:6px;">
-            <div style="width:100%;height:auto;border-radius:12px;background:var(--green);color:#fff;padding:10px 14px;text-align:center;box-shadow:0 4px 16px rgba(10,124,89,.25);">
-              <div style="font-size:11px;font-weight:800;letter-spacing:1px;opacity:.7;">STEP 3 · HOME PARTY</div>
-              <div style="font-size:14px;font-weight:900;">나의 공부방</div>
-            </div>
-            <div style="width:100%;height:60px;border-radius:8px;overflow:hidden;">
-              <img src="6_3.png" alt="Home Party" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-            </div>
-          </div>
           <!-- 우측 하단: Solo Party (STEP 2) -->
           <div style="position:absolute;right:10%;bottom:4px;z-index:2;width:160px;display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="font-size:12px;font-weight:900;color:var(--blue);letter-spacing:1px;">STEP 2</div>
             <div style="width:100%;height:auto;border-radius:12px;background:var(--blue);color:#fff;padding:10px 14px;text-align:center;box-shadow:0 4px 16px rgba(29,111,216,.2);">
-              <div style="font-size:11px;font-weight:800;letter-spacing:1px;opacity:.7;">STEP 2 · SOLO PARTY</div>
+              <div style="font-size:11px;font-weight:800;letter-spacing:1px;opacity:.7;">SOLO PARTY</div>
               <div style="font-size:14px;font-weight:900;">복습용 게임</div>
             </div>
             <div style="width:100%;height:60px;border-radius:8px;overflow:hidden;">
               <img src="6_2.png" alt="Solo Party" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
             </div>
           </div>
-          <!-- 순환 화살표: 출발 색상 = 출발 노드 색상 -->
+          <!-- 좌측 하단: Home Party (STEP 3) -->
+          <div style="position:absolute;left:10%;bottom:4px;z-index:2;width:160px;display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="font-size:12px;font-weight:900;color:var(--green);letter-spacing:1px;">STEP 3</div>
+            <div style="width:100%;height:auto;border-radius:12px;background:var(--green);color:#fff;padding:10px 14px;text-align:center;box-shadow:0 4px 16px rgba(10,124,89,.25);">
+              <div style="font-size:11px;font-weight:800;letter-spacing:1px;opacity:.7;">HOME PARTY</div>
+              <div style="font-size:14px;font-weight:900;">나의 공부방</div>
+            </div>
+            <div style="width:100%;height:60px;border-radius:8px;overflow:hidden;">
+              <img src="6_3.png" alt="Home Party" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+            </div>
+          </div>
+          <!-- 순환 화살표 -->
           <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;" viewBox="0 0 500 320">
             <defs>
               <marker id="ah-o2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="var(--orange)" opacity=".6"/></marker>
               <marker id="ah-g2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="var(--green)" opacity=".6"/></marker>
               <marker id="ah-b2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,1 L7,4 L0,7" fill="var(--blue)" opacity=".6"/></marker>
             </defs>
-            <!-- STEP1 Quiz(주황,상단) → STEP2 Solo(파,우하) : 우측 곡선 -->
-            <path d="M310,100 C380,120 420,180 380,230" fill="none" stroke="var(--orange)" stroke-width="3" stroke-dasharray="6,4" opacity=".7" marker-end="url(#ah-b2)"/>
-            <!-- STEP2 Solo(파,우하) → STEP3 Home(녹,좌하) : 하단 수평 곡선 -->
-            <path d="M320,280 C280,310 220,310 180,280" fill="none" stroke="var(--blue)" stroke-width="3" stroke-dasharray="6,4" opacity=".7" marker-end="url(#ah-g2)"/>
-            <!-- STEP3 Home(녹,좌하) → STEP1 Quiz(주황,상단) : 좌측 곡선 -->
-            <path d="M120,230 C80,180 120,120 190,100" fill="none" stroke="var(--green)" stroke-width="3" stroke-dasharray="6,4" opacity=".7" marker-end="url(#ah-o2)"/>
+            <!-- STEP1(상단) → STEP2(우하) : 주황 -->
+            <path d="M310,120 C345,145 365,180 370,220" fill="none" stroke="var(--orange)" stroke-width="3" stroke-dasharray="6,4" opacity=".7" marker-end="url(#ah-o2)"/>
+            <!-- STEP2(우하) → STEP3(좌하) : 파랑 -->
+            <path d="M320,280 C280,310 220,310 180,280" fill="none" stroke="var(--blue)" stroke-width="3" stroke-dasharray="6,4" opacity=".7" marker-end="url(#ah-b2)"/>
+            <!-- STEP3(좌하) → STEP1(상단) : 초록 -->
+            <path d="M130,220 C135,180 155,145 190,120" fill="none" stroke="var(--green)" stroke-width="3" stroke-dasharray="6,4" opacity=".7" marker-end="url(#ah-g2)"/>
           </svg>
         </div>
         <div class="card-orange up" style="padding:14px 16px;flex-shrink:0;">
